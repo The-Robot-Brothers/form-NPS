@@ -5,14 +5,26 @@
   --text: #727272;
 }
 
-html,
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   height: 100%;
   width: 100%;
 }
 
-* {
-  margin: 0;
+body,
+input,
+textarea,
+button {
+  font: 400 17px "Roboto", sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
 
 label {
@@ -23,6 +35,13 @@ span {
   margin: 0 0 0 5px;
   font-weight: 700;
   color: #000;
+}
+
+.line {
+  margin: 5% 0 5% 0;
+  width: 100%;
+  height: 2px;
+  background: var(--line);
 }
 
 .container {
@@ -38,7 +57,7 @@ span {
 }
 
 .header {
-  width: 100%;
+  width: 800px;
   height: 10vh;
   background: var(--primary);
   display: flex;
@@ -47,75 +66,68 @@ span {
 }
 
 .header img {
-  margin-left: 20%;
-  height: 70%;
-  width: height;
+  margin-left: 160px;
+  height: 48px;
+  width: 95px;
 }
 
 .header a {
-  margin-right: 20%;
+  margin-right: 160px;
 
   color: var(--background);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 16px;
 
   text-decoration: none;
+
 }
 
 .header a:hover {
-  color: var(--background);
+  opacity: 0.9;
 }
 
 .wrapper {
-  width: 70%;
+  width: 560px;
 }
 
 .wrapper .title {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 3% 0 3% 0;
+  text-align: center;
+  margin: 17px 0 17px 0;
 
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 16px;
 }
 
-.description {
+.wrapper .description {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 10px;
   padding: 10px;
 }
 
-.description .grid-item1 label {
+.wrapper .description .grid-item1 label {
   display: flex;
   align-items: center;
-  margin-bottom: 2%;
+  margin-bottom: 7px;
 
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
-.description .grid-item1 label:last-child {
+.wrapper .description .grid-item1 label:last-child {
   margin-bottom: 0;
 }
 
-.description .grid-item2 img {
+.wrapper .description .grid-item2 img {
   height: 150px;
-  width: height;
-}
-
-.line {
-  margin: 5% 0 5% 0;
-  width: 100%;
-  height: 2px;
-  background: var(--line);
+  width: 150px;
 }
 
 .question label {
   display: flex;
   text-align: center;
-  margin-bottom: 3%;
+  margin-bottom: 17px;
 }
 
 .answers {
@@ -125,15 +137,16 @@ span {
 }
 
 .value {
-  width: 2.7rem;
-  height: 2rem;
-  padding: 15px 4px 4px 4px;
+  width: 50px;
+  height: 40px;
   border-radius: 50%;
   color: var(--background);
 
-  text-align: center;
   text-decoration: none;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
 }
 
@@ -168,6 +181,7 @@ span {
   background: #319905;
 }
 
+
 .thanks {
   display: grid;
   grid-template-rows: auto auto auto;
@@ -177,13 +191,14 @@ span {
 
 .footer {
   display: grid;
-  grid-template-rows: auto auto auto auto;
-  padding: 10px;
-  justify-content: center;
+  grid-template-rows: 110px 15px 40px 70px;
+  grid-gap: 5px;
+  justify-content:center;
 
-  width: 100%;
-  height: 30vh;
+  width: 800px;
+  height: 270px;
   background: var(--primary);
+  margin-bottom: 10px;
 }
 
 .footer .grid-item1 {
@@ -192,14 +207,13 @@ span {
 }
 
 .footer .grid-item1 img {
-  height: 130px;
-  width: height;
+  height: 100px;
+  width: 100px;
 }
 
 .footer .grid-item2 {
   display: flex;
   justify-content: center;
-  padding-bottom: 5px;
 }
 
 .footer .grid-item2 label {
@@ -207,24 +221,30 @@ span {
 }
 
 .footer .grid-item3 {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30% 5px 30%;
+  width:150px;
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  margin: 0 auto;
+  
 }
 
 .footer .grid-item3 img {
-  height: 80%;
-  width: height;
+  height: 25px;
+  width: 25px;
 }
 
 .footer .grid-item4 {
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 20px 20px;
+  align-items: center;
+  text-align: center;
+  padding-top:30px;
 }
 
 .footer .grid-item4 label {
   color: var(--background);
-  font-size: 0.6rem;
+  font-size: 10px;
 }
 
 .footer .grid-item4 label a {
